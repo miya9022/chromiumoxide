@@ -571,7 +571,7 @@ impl Target {
     pub(crate) fn page_init_commands(timeout: Duration) -> CommandChain {
         let attach = SetAutoAttachParams::builder()
             .flatten(true)
-            .auto_attach(true)
+            .auto_attach(false)
             .wait_for_debugger_on_start(true)
             .build()
             .unwrap();
